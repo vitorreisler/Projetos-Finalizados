@@ -1,0 +1,330 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  /*border: 1px solid black;*/
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  background-color: rgb(125, 205, 231);
+  box-sizing: border-box ;
+}
+img {
+  border-radius: 100%;
+  padding: 5px;
+  margin-right: 10px;
+
+}
+
+/*ESSE PROJETO TEM QUE TER: 3 COLUNAS, 2 LINHAS */
+
+
+
+section.nomefoto {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+main {
+  position: relative;
+  background-color: rgb(125, 205, 231);
+  //border: 1px solid red;
+  margin: 0px auto;
+  width: 100vw;
+  height: 100vh;
+  box-sizing: border-box ;
+}
+
+section.container {
+  position: relative;
+  height: 90vh;
+  width: 85.3vw;
+  margin: 20px auto 10px auto;
+  border-radius: 15px;
+  background-color: lightgrey; 
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.589); 
+  /*Grid*/
+  display: grid;
+  grid-gap: 10px 30px;
+  grid-template-columns: 1fr 1fr 1fr ;
+  grid-template-areas: "daniel jonathan kira"
+                       "jeanette patrick kira";
+
+
+  
+  /*width: 85.2vw;
+  height: 90vh;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 15px;*/
+}
+section.daniel{
+  border: 1px solid black;
+  padding: 20px;
+  width: 37vw;
+  border-radius: 15px;
+  background-color: hsl(263, 55%, 52%);
+  color: white;
+  //margin: 10px;
+  /*Grid*/
+  grid-column-start: 1;
+  grid-column-end:2;
+  grid-area: daniel;
+  max-width: 500px;
+  min-width: 200px;
+  
+}
+
+section.jonathan {
+  border: 1px solid black;
+  width: 18vw;
+  //height: 38vh;
+  //margin-top: 20px;
+  border-radius: 15px;
+  padding: 30px;
+  background-color: hsl(217, 19%, 35%);
+  color: white;
+  /*grid*/
+  grid-area: jonathan;
+  grid-column-start: 2;
+  grid-column-end:3;
+  max-width: 500px;
+  min-width: 200px;
+}
+
+section.jeanette {
+  border: 1px solid black;
+  width: 18vw;
+  //height: 34vh;
+  margin-top: 20px;
+  border-radius: 15px;
+  padding: 10px;
+  background-color: white;
+  color: hsl(217, 19%, 35%);
+  /*grid*/
+  grid-area:jeanette;
+  max-width: 500px;
+  min-width: 200px;
+}
+section.patrick {
+  border: 1px solid black;
+  
+  border-radius: 15px;
+  padding: 15px;
+  background-color: rgb(104, 104, 104);
+  color: white;
+  /*grid*/
+  grid-area: patrick;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin-left: 300px;
+  margin-top: 21px;
+  max-width: 620px;
+  min-width: 200px;
+}
+section.kira {
+  border: 1px solid black;
+  width: 17.1vw ;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: white;
+  color: hsl(217, 19%, 35%);
+  /*grid*/
+  grid-area: kira;
+  /*grid-column-start: 3;
+  grid-column-end: 5;*/
+  max-width: 500px;
+  min-width: 200px;
+}
+
+/*Tela pc menor*/
+@media only screen and (max-width: 865px) {
+  section.container {
+    margin: 10px 10px 10px 0px;
+    height: 110vh;
+  }
+  section.jeanette {
+    width: 0px;
+  }
+  section.patrick{
+    position: relative;
+    left: 250px;
+    margin-left: 0px;
+    width: 380px;
+  }
+  section.kira {
+    height: auto;
+  }
+}
+
+
+ /*Tela Tablet*/
+ @media only screen and (max-width: 700px){
+  section.container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 200vh;
+    margin: auto;
+   /* display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "daniel jonathan "
+    "jeanette patrick"
+    "kira";*/  
+}
+section.daniel {
+  margin: auto;
+  width: 200px;
+  height: 500px;
+  padding: 15px;
+}
+section.jonathan {
+  position: relative;
+  bottom: 130px;
+  margin: auto;
+  width: 200px;
+  padding: 15px;
+  
+}
+section.jeanette {
+  position: relative;
+  bottom: -150px;
+  left: 260px;
+  margin: auto;
+  width: 200px;
+  padding: 15px;
+}
+section.patrick { 
+  position: relative;
+  bottom: 250px;
+  left: -20px;
+  padding: 15px;
+  width: 200px;
+
+}
+section.kira {
+  position: relative;
+  bottom: 450px;
+  left: 20px;
+  width: 200px;
+  padding: 15px;
+}
+ }
+
+ /*Tela de celular*/
+ @media only screen and (max-width: 592px){
+  main {
+    width: 90vw;
+    height: 200vh;
+  }
+ 
+  section.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90vw;
+    height: 200vh;
+   /* display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "daniel jonathan "
+    "jeanette patrick"
+    "kira";*/  
+}
+section.daniel {
+  margin: auto;
+  width: 200px;
+  padding: 15px;
+}
+section.jonathan {
+  margin: auto;
+  width: 200px;
+  padding: 15px;
+}
+section.jeanette {
+  margin: auto;
+  width: 200px;
+  padding: 15px;
+}
+section.patrick { 
+  margin: auto;
+  padding: 15px;
+  width: 200px;
+
+}
+section.kira {
+  //margin: auto;
+  width: 200px;
+  padding: 15px;
+}
+ }
+
+
+
+/*Tela de celular*/
+
+@media only screen and (max-width: 570px){
+  body {
+    margin: 0 auto 0 auto;
+    height: 365vh;
+    width: 52vw;
+    bo
+  }
+  main {
+    height: 365vh;
+    width: 52vw;
+    border-radius: 15px;
+
+  }
+  section.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0 auto 0 auto;
+    
+    height: 365vh;
+    width: 52vw;
+    
+   /* display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "daniel jonathan "
+    "jeanette patrick"
+    "kira";*/  
+}
+section.daniel {
+  margin: 20px auto 0 auto;
+  width: 200px;
+  padding: 15px;
+}
+section.jonathan {
+  /*position: relative;
+  top: 1px;
+  left: 60px;*/
+  margin: 150px auto 0px auto  ;
+  width: 200px;
+  padding: 15px;
+}
+section.jeanette {
+  top: -120px;
+  left: 0px;
+  margin: 10px 0 10px 0  ;
+  width: 200px;
+  padding: 15px;
+}
+section.patrick { 
+  top: -120px;
+  left: 0px;
+  margin: 10px 0 10px 0  ;
+  width: 200px;
+  padding: 15px;
+
+}
+section.kira {
+  bottom: -1631px;
+  left: -262px;
+  //margin: 10px 0 10px 0;
+  width: 200px;
+  padding: 15px;
+}
+ }
